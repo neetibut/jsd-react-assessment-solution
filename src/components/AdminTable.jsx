@@ -82,13 +82,13 @@ export function AdminTable() {
         </thead>
         <tbody>
           {users.map((user) => (
-            <tr key={user.id} className="bg-white">
-              <td className="border p-2 ">{user.name}</td>
-              <td className="border p-2 ">{user.lastname}</td>
-              <td className="border p-2 ">{user.position}</td>
+            <tr key={user._id} className="bg-white">
+              <td className="border p-2 ">{user.username}</td>
+              <td className="border p-2 ">{user.email}</td>
+              <td className="border p-2 ">{user.role}</td>
               <td className="border p-2 ">
                 <button
-                  onClick={() => handleDelete(user.id)}
+                  onClick={() => handleDelete(user._id)}
                   className="cursor-pointer bg-rose-400 hover:bg-rose-500 text-white px-2 rounded-xl"
                 >
                   Delete

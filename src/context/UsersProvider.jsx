@@ -3,7 +3,8 @@ import { UsersContext } from "./UsersContext";
 import axios from "axios";
 
 export function UsersProvider({ children }) {
-  const API = "https://67eca027aa794fb3222e43e2.mockapi.io/members";
+  // const API = "https://67eca027aa794fb3222e43e2.mockapi.io/members";
+  const API = "http://localhost:3000/api/v2/users";
 
   const [view, setView] = useState(null);
   const [users, setUsers] = useState([]);
@@ -11,7 +12,7 @@ export function UsersProvider({ children }) {
   const fetchUsers = async () => {
     try {
       const res = await axios.get(API);
-      setUsers(res.data);
+      setUsers(res.data.data);
     } catch {
       alert("Failed to fetch users");
     }
