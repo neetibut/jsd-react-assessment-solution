@@ -19,7 +19,6 @@ const router = createBrowserRouter([
           { path: "/owner", element: <Owner /> },
         ],
       },
-      // { path: "/owner", element: <Owner /> },
     ],
   },
 ]);
